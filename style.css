@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+ul li{
+    height: 100%;
+    color: white;
+    list-style: none;
+    font-weight: 600;
+    font-size: 45px;
+    margin: 3rem;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+.cursor{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.1s;
+    pointer-events: none;
+    mix-blend-mode: difference;
+
+}
+
+ul li:hover ~ .cursor{
+    transform: scale(4);   
+}
